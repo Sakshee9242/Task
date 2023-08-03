@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        body{
+            background-color: palevioletred;
+        }
+        .navbar{
+            background-color: blueviolet;
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 30px 10px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            color: aliceblue;
+            text-decoration: none;
+         }
+         .x{
+            font-size: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            float: right;
+            list-style: none;
+            color: white;
+            margin: 14px 24px;
+            padding: 10px 15px;
+        }
+        .y{
+            font-family: fantasy;
+            font-size: 20px;
+            margin: 10px 10px;
+            padding: 10px 10px;
+        }
+        .btn{
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin: 10px 10px;
+            padding: 15px 15px;
+            width: 300%;
+        }
+
+    </style>
+</head>
+<body>
+      <header>
+        <a class="x" href="#">Deluxe</a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Restaurant</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form class="y" action="backend.php" method="post">
+        <table align="center" width="400px" >
+        <tr>
+            <td>Your name:</td>
+            <td><input type="text" placeholder="enter your name"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Your Email:</td>
+            <td><input type="email" placeholder="enter your email"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Message:</td>
+            <td><textarea name="message" id="" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td><button class="btn">Send Message</button></td>
+        </tr>
+        </table>
+             
+    </form>
+</body>
+</html>
