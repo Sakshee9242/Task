@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+        }
+        .x{
+            height: 400px;
+            width: 250px;
+            background: gray;
+            position: relative;  
+            overflow: hidden;
+        }
+        .y{
+            height: 390px;
+            width: 240px;
+            background: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;transform: translate(-50%, -50%);
+            
+        }
+        .z{
+            height: 600px;
+            width: 400px;
+            background: linear-gradient(red,blue,green,yellow,red,greenyellow,white);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: .5s;
+        }
+        .x:hover .z{
+                  transform: translate(-50%,-50%) rotate(360deg);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="x">
+        <div class="z"></div>
+        <div class="y"></div>
+    </div>
+</body>
+</html>
