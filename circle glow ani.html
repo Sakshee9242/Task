@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #000000;
+        }
+        .x{
+            height: 200px;
+            width: 200px;
+            background: linear-gradient(135deg,#0f0f0f,#494747,#8d8b8b,#ffffff);
+            border-radius: 50%;
+            margin: 150px auto;
+            position: relative;
+            box-shadow: 1px 1px #ffffff ;
+            animation: ani 2s linear infinite;
+        }
+         @keyframes ani{
+            from{transform: rotate(0deg); }
+            to{transform: rotate(360deg); }
+        } 
+        .y{
+            height: 195px;
+            width: 195px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+    </style>
+
+</head>        
+
+<body>
+     <div class="x">
+     <div class="y"></div>
+    </div>
+</body>
+</html>
