@@ -25,7 +25,19 @@
                 -webkit-background-clip: text;
                 /* color: transparent; */
                 font-family: "Audiowide", sans-serif;
-                /* mix-blend-mode: multiply; */
+                animation: ani 1s linear infinite;
+            }
+            @keyframes ani{
+                0%{ text-shadow: 1px -3px 5px #00ced1,
+                             -1px 3px 5px  #00ced1,
+                             3px 1px 5px  #00ced1,
+                             -3px -1px 5px  #00ced1;}
+              100%{
+                text-shadow: 1px -2px 25px #445b5c,
+                             -1px 2px 20px  #d100b5,
+                             3px 5px 10px  #1e12c2,
+                             -3px -1px 25px  #3e4b4b;
+              }               
             }
             .y{  margin: 500px 300px;
                 font-size: 150px;
@@ -39,6 +51,21 @@
 
                 background: linear-gradient(#ff00d2,purple,#ff00d2,purple);
                 -webkit-background-clip: text;
+                animation: ani1 1s linear infinite;
+            }
+            @keyframes ani1{
+            0% {
+                text-shadow: 1px -4px 4px #f18ff1,
+                -1px 4px 4px  #9a22d1,
+                4px 1px 4px  #501ba5,
+                -4px -1px 4px  #ff00ff;
+            }
+            100%{
+                text-shadow: 1px -14px 10px #d181d1,
+                -1px 4px 5px  #881aaa,
+                10px 1px 4px  #7009b4,
+                -4px -1px 14px  #ff00ff;
+            }   
             }
     </style>
 </head>
