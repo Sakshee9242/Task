@@ -11,17 +11,21 @@
         .x{
             height: 200px;
             width: 200px;
-            background: linear-gradient(135deg,#0f0f0f,#494747,#8d8b8b,#ffffff);
+            background: linear-gradient(135deg,#0f0f0f,#494747,#d8d6d6,rgb(255, 249, 249));
             border-radius: 50%;
             margin: 150px auto;
             position: relative;
-            box-shadow: 1px 1px #ffffff ;
-            animation: ani 2s linear infinite;
+            box-shadow: 1px 1px 3px #ffffff,
+                       -1px 1px 3px #ffffff,
+                       1px 1px 2px #ffffff,
+                       1px -1px 2px #ffffff;
+
+            animation: ani 5s linear infinite;
         }
-         @keyframes ani{
+          @keyframes ani{
             from{transform: rotate(0deg); }
             to{transform: rotate(360deg); }
-        } 
+        }
         .y{
             height: 195px;
             width: 195px;
