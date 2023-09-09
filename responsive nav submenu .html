@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background: black;
+            display: flex;
+            justify-content: center;
+        }
+        li{
+            display: inline;
+            color: aliceblue;
+            padding: 10px;
+            text-transform: uppercase;
+            font-family: sans-serif;
+        }
+        li:hover{
+            color: brown;
+        }
+         .x{ 
+            display: none;
+            opacity: 0;
+         }
+         
+        @media(max-width:500px){
+            li{display: block;
+            text-transform: capitalize;}
+            .x{ opacity: 1;
+               display: block;}
+            .y:hover{color: blue;}
+            .y{transform: translate(-50px, 10px);
+               font-size: 13px;
+            text-transform: capitalize;}
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>Service
+               <ul class="x">
+                <li class="y">Service1</li>
+                <li class="y">Service2</li>
+                <li class="y">Service3</li>
+                <li class="y">Service4</li>
+               </ul>
+            </li>
+            <li>contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
