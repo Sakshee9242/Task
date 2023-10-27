@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 400px;
+            width: 80%;
+            background-color: blue;
+            position: relative;
+            transform: translate(-1210px);
+            transition: 2s;
+           margin: 100px auto;
+        }
+        .xyz{
+            transform: translate(0px);
+            transition: 2s;
+        }
+        button{
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            background-color: brown;
+            border-radius: 50%;
+            border: 2px solid green;
+            top: 46%;
+            left: 99%;
+        }
+        .img{
+            position: relative;
+        }
+        img{
+            margin-top: 10px;
+            margin-left: 10px;
+            height: 380px;
+            width: 340px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main" id="main">
+        <Button onclick="OnClick()">&gt;</Button>
+        <div class="img">
+            <img src="gallery-2.jpeg" alt="">
+            <img src="gallery-3.jpeg" alt="">
+            <img src="gallery-4.jpeg" alt="">
+        </div>
+    </div>
+    <script>
+
+        var main_tag = document.getElementById("main")
+        function OnClick(){
+            // if(main_tag ==""){
+            //     main_tag.style.transform = "translate(-1350px)"
+               
+            // }
+            // else{
+            //     main_tag.style.transform = "translate(0px)"
+            //     main_tag.style.transition = "2s"
+            // }
+            main_tag.classList.toggle("xyz")
+        }
+
+    </script>
+</body>
+</html>
