@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="gallery-2.jpeg" alt="" id="img1">
+    <button onclick="OnClick()">Change Image</button>
+
+    <script>
+        var img_tag = document.getElementById("img1")
+
+        function OnClick(){
+            if(img_tag.src.match("gallery-2.jpeg")){
+                img_tag.src = "gallery-1.jpeg"
+                
+            }
+            else{
+                img_tag.src = "gallery-2.jpeg"
+            }
+        }
+    </script>
+</body>
+</html>

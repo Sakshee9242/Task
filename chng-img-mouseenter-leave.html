@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="gallery-4.jpeg" alt="" id="chng">
+    <button onmouseenter="ChangeImage()" onmouseleave="ChangeImage1()">Change Img</button>
+
+    <script>
+
+        var img_tag = document.getElementById("chng")
+
+        function ChangeImage(){
+            img_tag.src = "gallery-2.jpeg"
+        }
+        function ChangeImage1(){
+            img_tag.src = "gallery-4.jpeg"
+        }
+
+        
+    </script>
+</body>
+</html>
