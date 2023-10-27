@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form>
+    FirstName : <input type="text" id="inp1" onblur="Validate(inp1,sp1)">
+    <span id="sp1"></span>
+    <br>
+    <br>
+    FirstName : <input type="text" id="inp2" onblur="Validate(inp2,sp2)">
+    <span id="sp2"></span>
+    <br>
+    <br>
+    FirstName : <input type="text" id="inp3" onblur="Validate(inp3,sp3)">
+    <span id="sp3"></span>
+    <br>
+    <br>
+    FirstName : <input type="text" id="inp4" onblur="Validate(inp4,sp4)">
+    <span id="sp4"></span>
+    <br>
+    <br>
+   </form>
+
+    <script>
+       function Validate(tag,sp){
+        if(tag.value ==""){
+            sp.innerHTML = "**Required.....!"
+        }
+        else{
+            sp.innerHTML = ""
+        }
+       }
+    </script>
+</body>
+</html>
