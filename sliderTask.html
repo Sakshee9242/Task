@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{
+        position: relative;
+    }
+        img{
+         height: 300px;
+         width: 100%;
+    }
+ .b1{
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        background: transparent;
+        font-size: 40px;
+        border: none;
+        color: #ffffff;
+        font-family: cursive;
+        font-weight: bold;
+        box-shadow: 0 0 30px #ffffff inset;
+        border-radius: 10px;
+    }
+    .b2{
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        background: transparent;
+        font-size: 40px;
+        border: none;
+        color: #ffffff;
+        font-family: cursive;
+        font-weight: bold;
+        box-shadow: 0 0 30px #ffffff inset;
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <img id="i1" src="gallery-1.jpeg" alt="">
+       
+        <button class="b1" onclick="Slider()"> > </button>
+        <button class="b2" onclick="Slider1()"> < </button>
+    </div>
+    <script>
+        let img1 = document.querySelector("#i1")
+        console.log(img1)
+        console.log(img1.src)
+       
+        function Slider(){
+           if(img1.src.match("gallery-1.jpeg")){
+               img1.src = "gallery-2.jpeg"
+           }
+          else if(img1.src.match("gallery-2.jpeg")){
+               img1.src = "gallery-3.jpeg"
+           }
+          else if(img1.src.match("gallery-3.jpeg")){
+               img1.src = "gallery-4.jpeg"
+           }
+          else{
+               img1.src = "gallery-1.jpeg"
+           }
+          // setTimeout(Slider, 2000)
+        }
+       // Slider()
+
+      function Slider1(){
+           if(img1.src.match("gallery-4.jpeg")){
+               img1.src = "gallery-3.jpeg"
+           }
+          else if(img1.src.match("gallery-3.jpeg")){
+               img1.src = "gallery-2.jpeg"
+           }
+          else if(img1.src.match("gallery-2.jpeg")){
+               img1.src = "gallery-1.jpeg"
+           }
+          else{
+               img1.src = "gallery-4.jpeg"
+           }
+
+        }
+    </script>
+</body>
+</html>
