@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        nav{
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: blue; 
+            height: 50px;    
+        }
+        #logo{
+            font-size: 30px;
+            font-weight: bolder;
+            color: aliceblue;
+            font-family: sans-serif;
+            cursor: pointer;
+            margin-left:-700px;
+        }
+        ul{
+            position: absolute;
+            transition: 1s;
+           
+        }
+        ul li{
+            display: inline;
+            margin-left: 30px;
+            font-size: 25px;
+            font-weight: bolder;
+            font-family: sans-serif;
+            color: aliceblue;
+            position: relative;
+            cursor: pointer
+        }
+        ul li::before{
+            content: '';
+            position: absolute;
+            height: 4px;
+            width: 0;
+            top: 100%;
+            background: #ffffff;
+            transition: 1s;
+        }
+        ul li:hover::before{
+            width: 100%;
+        }
+        #btn{
+            font-size: 30px;
+            font-family: sans-serif;
+            color: #ffffff;
+            display: none;
+            position: absolute;
+
+        }
+
+        @media(max-width:500px){
+            #logo{
+                margin-left:-350px;
+            }
+              #btn{
+                   display: block;
+                   right: 10px;
+              }
+              ul{
+                background: gray;
+                width: 600px;
+                height: 230px;
+                margin-top: 280px;
+                transform: translateX(0px);
+              }
+              ul li{
+                  margin-top: 10px;
+                  display: block;
+                  text-align: center;
+            
+                  /* transform: translate(0px,50px); */
+              }
+              ul li:hover::before{
+                width: 15%;
+              }
+        }
+
+        
+           
+    </style>
+</head>
+<body>
+     <nav>
+        <div id="logo">LOGO</div>
+        <div id="btn" onclick="Onclick()"><i class="fa-solid fa-xmark"></i></div>
+        <ul id="menu">
+           <li>Home</li>
+           <li>About</li>
+           <li>Service</li>
+           <li>Team</li>
+           <li>Contact</li>
+        </ul>
+     </nav>
+   <script>
+       let ul = document.getElementById('menu')
+       console.log(ul)
+       let btn = document.getElementById('btn')
+       console.log(btn)
+
+       function Onclick(){
+        if(ul.style.transform =='translateX(0px)'){
+            ul.style.transform = "translateX(600px)"
+        }
+          else{
+            ul.style.transform = "translateX(0px)"
+          }
+       }
+   </script>
+   
+</body>
+</html>
