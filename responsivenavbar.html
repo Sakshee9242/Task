@@ -13,7 +13,7 @@
             justify-content: space-around;
             align-items: center;
             background: blue; 
-            height: 50px;    
+            height: 50px; 
         }
         #logo{
             font-size: 30px;
@@ -26,6 +26,7 @@
         ul{
             position: absolute;
             transition: 1s;
+            z-index: 1;
            
         }
         ul li{
@@ -69,17 +70,17 @@
               }
               ul{
                 background: gray;
-                width: 600px;
+                width: 500px;
                 height: 230px;
                 margin-top: 280px;
-                transform: translateX(0px);
+               left: 0%;
               }
               ul li{
                   margin-top: 10px;
                   display: block;
                   text-align: center;
+                  overflow: hidden;
             
-                  /* transform: translate(0px,50px); */
               }
               ul li:hover::before{
                 width: 15%;
@@ -109,12 +110,12 @@
        console.log(btn)
 
        function Onclick(){
-        if(ul.style.transform =='translateX(0px)'){
-            ul.style.transform = "translateX(600px)"
-        }
-          else{
-            ul.style.transform = "translateX(0px)"
-          }
+         if(ul.style.left =='0%'){
+             ul.style.left = "-100%"
+         }
+           else{
+             ul.style.left = "0%"
+           }
        }
    </script>
    
