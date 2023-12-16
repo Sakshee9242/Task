@@ -7,24 +7,39 @@
 </head>
 <body>
     <script>
-    //     x = 34
+         x = 34
 
-    //   res =  (x%2==0) ? "even" : "odd"
-    //   document.write(res);
+       res =  (x%2==0) ? "even" : "odd"
+       document.write(res + "<br>");
 
       mark1 = 409 
       mark2 = 1000
-      mark3 = 102000
+      mark3 = 1020
       mark4 = 20000
 
     //   op = (mark1>mark2 && mark1>mark3) ? mark1 : (mark2>mark3) ? mark2 : mark3
 
-    op = (mark1>mark2 && mark1>mark3) ? mark1 : (mark1>mark4) ? mark1 : (mark2>mark3) ? mark2 : (mark2>mark4) ? mark2 : (mark3>mark4) ? mark3:mark4
+    op = (mark1>mark2 && mark1>mark3) ? mark1 : (mark1>mark4) ? mark1 : (mark2>mark3 && mark2>mark4 ) ? mark2 : (mark3>mark4) ?  mark3:mark4
     document.write(op +"<br>")
+
+    opp = (mark1>mark2 && mark1>mark3 && mark1>mark4) ? mark1 : (mark2>mark3 && mark2>mark4) ? mark2 : (mark3>mark4) ? mark3:mark4
+    document.write(opp +"<br>")
 
 
   po = (mark1>mark2) ? mark1 : (mark1>mark3) ? mark1 : (mark1>mark4) ? mark1 : (mark2>mark3) ? mark2 : (mark2>mark4) ? mark2 : (mark3>mark4) ? mark3:mark4
-  document.write(po)
+  document.write(po + "<br>")
+
+  a=12
+  b=15
+  c=20
+  d=50
+  e=60
+  
+  max = (a>b&&a>c&&a>d&&a>e) ? a : (b>c&&b>d&&b>e) ? b : (c>d&&c>e) ? c : (d>e) ? d:e
+  document.write(max + "<br>")
+
+  max1 = (a>b,a>c,a>d,a>e) ? a : (b>c,b>d,b>e) ? b : (c>d,d>e) ? c : (d>e) ? d:e
+  document.write(max1)
 
     
     </script>
