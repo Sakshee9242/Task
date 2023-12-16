@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .img{
+            transition: 1s;
+        } */
+        .video{
+            /* display: none;  */
+            height: 500px;
+            transform: translatey(-540px);
+            transition: 2.5s;
+             
+        } 
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="gallery-1.jpeg" alt="" height="300px">
+            <button  onclick=" Onclick()">click me</button>
+            <div class="video">
+                <video src="5 Minute Wildlife - A Mixture of Animals & Nature (Relaxing Video & Music).mp4" height="220px" controls loop autoplay></video>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        img = document.querySelector(".img")
+        vdo = document.querySelector(".video")
+        console.log(img)
+        console.log(vdo)
+
+        function Onclick(){
+           vdo.style.transform = "translatey(0px)"
+        }
+        
+       
+    
+    </script>
+</body>
+</html>
