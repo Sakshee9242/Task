@@ -12,16 +12,19 @@
     //   res =  (x%2==0) ? "even" : "odd"
     //   document.write(res);
 
-      mark1 = 409000
-      mark2 = 100000
-      mark3 = 10200
+      mark1 = 409 
+      mark2 = 1000
+      mark3 = 102000
       mark4 = 20000
 
     //   op = (mark1>mark2 && mark1>mark3) ? mark1 : (mark2>mark3) ? mark2 : mark3
 
-    op = (mark1>mark2 && mark1>mark3) ? mark1 : (mark1>mark4) ? mark2 : (mark2>mark3) ? mark2 : (mark2>mark4) ? mark2 : (mark3>mark4) ? mark3:mark4
-    document.write(op)
+    op = (mark1>mark2 && mark1>mark3) ? mark1 : (mark1>mark4) ? mark1 : (mark2>mark3) ? mark2 : (mark2>mark4) ? mark2 : (mark3>mark4) ? mark3:mark4
+    document.write(op +"<br>")
 
+
+  po = (mark1>mark2) ? mark1 : (mark1>mark3) ? mark1 : (mark1>mark4) ? mark1 : (mark2>mark3) ? mark2 : (mark2>mark4) ? mark2 : (mark3>mark4) ? mark3:mark4
+  document.write(po)
 
     
     </script>
