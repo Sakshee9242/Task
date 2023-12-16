@@ -1,0 +1,89 @@
+|<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        img{
+            width: 100%;
+            height: 100px;
+        }
+        .i1{
+            transform: translate(0px);
+            transition: 1s;
+        }
+        .i2{
+            transform: translate(0px);
+            transition: 1s;
+        }
+        .i3{
+            transform: translate(0px);
+            transition: 1s;
+
+        }
+        .i4{
+            transform: translate(0px);
+            transition: 1s;
+
+        }
+         #btn1{
+     position: absolute;
+     font-size: 40px;
+     right: 0;
+     top: 50%;
+        }
+         #btn2{
+     position: absolute;
+     font-size: 40px;
+     left: 0;
+     top: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="img">
+    <img class="i1" src="gallery-1.jpeg" alt="">
+    <img class="i2" src="gallery-2.jpeg" alt="">
+    <img class="i3" src="gallery-3.jpeg" alt="">
+    <img class="i4" src="gallery-4.jpeg" alt="">
+    <button id="btn1" onclick="Slide()" > > </button>
+    <button id="btn2" onclick="Slideleft()"> < </button>
+    </div>
+   
+    <script>
+        btn1 = document.getElementById('btn1')
+        btn2 = document.getElementById('btn2')
+        i1 = document.querySelector('.i1');
+        console.log(i1)
+        i2 = document.querySelector('.i2')
+        i3 = document.querySelector('.i3')
+        i4 = document.querySelector('.i4')
+       
+        function Slide(){
+
+            i1.style.transform = "translateX(-55%)"
+            i2.style.transform = "translateX(-55%)"
+            i3.style.transform = "translateX(-55%)"
+            i4.style.transform = "translateX(-55%)"
+        }
+       
+        function Slideleft(){
+
+            i1.style.transform = "translateX(55%)"
+            i2.style.transform = "translateX(55%)"
+            i3.style.transform = "translateX(55%)"
+            i4.style.transform = "translateX(55%)"
+        }
+       
+    </script>
+    
+</body>
+</html>
