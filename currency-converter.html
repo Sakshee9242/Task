@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .maindiv
+        {
+            border: 5px solid purple;
+            text-align: center;
+            width: 50%;
+            margin: auto;
+            font-size: 25px;
+        }
+        input,select,button{
+            height: 40px;
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+        <h1>Exchange converter</h1>
+        <p>Type amount in IND Rupees</p>
+        <input type="text" id="txt1">
+        <br>
+        <br>
+        <p>To convert with:</p>
+        <select  id="sel">
+            <option hidden>--select currency--</option>
+            <option>Europe</option>
+            <option>china</option>
+            <option>canada</option>
+            <option>UAE</option>
+            <option>Australia</option>
+        </select>
+        <br>
+        <br>
+        <button onclick="onclick1()">CALCULATE</button>
+        <br>
+        <p>AMOUNT IN IND RUPEE:</p>
+        <h1 id="result"></h1>
+    </div>
+    <script>
+        var text1 = document.getElementById('txt1');
+        var sel1 = document.getElementById('sel');
+        var res = document.getElementById('result');
+        function onclick1(){
+            if(sel1.value=='Europe'){
+                res.innerHTML=text1.value * 85;
+            }
+            else if(sel1.value=='china')
+            {
+                res.innerHTML=text1.value * 75;
+            }
+            else if(sel1.value=='canada')
+            {
+                res.innerHTML=text1.value * 65;
+            }
+            else if(sel1.value=='UAE')
+            {
+                res.innerHTML=text1.value * 105;
+            }
+            else if(sel1.value=='Australia')
+            {
+                res.innerHTML=text1.value * 55;
+            }
+            else{
+                res.innerHTML="invalid!"
+            }
+        }
+    </script>
+</body>
+</html>
