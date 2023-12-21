@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+                text-align: center; 
+                background-color: aqua;
+                height: 500px;
+                width: 50%;
+                margin: 40px auto;
+                padding: 20px 10px;
+                border: 5px groove indianred;
+                border-radius: 20px;
+        }
+        h1{
+            text-decoration: underline;
+            font-size: 40px;
+            color: rgb(17, 134, 236);
+            text-transform: uppercase;
+
+        }
+        h2{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: brown;
+            font-size: 30px;
+            text-decoration: underline;
+        }
+        h3{
+            font-size: 30px;
+            color: blueviolet;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        input{
+            height: 50px;
+            width: 250px;
+            outline: none;
+            border: none;
+        }
+        select{
+            width: 250px;
+            height: 50px;
+        }
+        button{
+            
+                 height: 40px;
+                 width: 100px;
+                 border: 5px solid red;
+                 border-radius: 10px;
+                font-size: 20px;
+        }
+        span{
+            height: 40px;
+            width: 50px;
+            font-size: 20px;
+        }
+        p{
+            height: 10px;
+            font-size: 30px;
+            color: brown;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+       <div class="main">
+        <h1>currency converter</h1>
+          <h2> This is a Ruppes Box</h2>
+           <input type="text" id="india">
+           <br>
+           <h3>To convert With</h3>
+           <select id="country">
+               <option hidden>Select country</option>
+               <option>Europe</option>
+               <option>Kuwait</option>
+               <option>UAE</option>
+               <option>Australia</option>
+               <option>China</option>
+               <option>Canada</option>
+           </select>
+           <p>Result</p>
+         <span id="result"></span>
+           <br>
+           <br>
+           <button onclick="Changecurrency()">onclick</button>
+       </div>
+
+       <script>
+        inp1 = document.getElementById('india')
+         select = document.getElementById('country')
+         console.log(select.value)
+         span = document.getElementById('result')
+
+
+         function Changecurrency(){
+            if(select.value=='Europe'){
+                span.innerHTML=inp1.value*1.330;
+            }
+            else if(select.value=='Kuwait'){
+                span.innerHTML=inp1.value*270.85;
+            }
+            else if(select.value=='UAE'){
+                span.innerHTML=inp1.value*22.66;
+            }
+            else if(select.value=='Australia'){
+                span.innerHTML=inp1.value*56.42;
+            }
+            else if(select.value=='China'){
+                span.innerHTML=inp1.value*11.94;
+            }
+            else if(select.value=='Canada'){
+                span.innerHTML=inp1.value*62.46;
+            }
+            else{
+                span.innerHTML= 'invalid'
+            }
+         }
+       </script>
+</body>
+</html>

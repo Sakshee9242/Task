@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body *{
+            margin-top: 10px;
+        }
+        .main{
+            text-align: center; 
+                background-color: crimson;
+                height: 500px;
+                width: 50%;
+                margin: 40px auto;
+                padding: 30px 10px;
+                border-radius: 20px;
+                box-shadow: 3px 2px 3px 0  crimson,
+                            -3px -2px 3px 0 indianred
+        }
+        button{
+            
+            height: 40px;
+            width: 100px;
+            border: 5px solid red;
+            border-radius: 10px;
+           font-size: 20px;
+   }
+   input{
+            height: 50px;
+            width: 400px;
+            outline: none;
+            border: none;   
+            border-radius: 30px;    
+        }
+        input[type=text]{
+            font-size: 30px;
+        }
+        h1{
+            text-decoration: underline;
+            font-size: 35px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        h2{
+            font-family: sans-serif;
+            color: burlywood;
+            font-size: 30px;
+            text-decoration: underline;
+            margin-top: 15px;
+        }
+        select{
+            width: 400px;
+            height: 50px;
+            border-radius: 30px;
+            font-size: 25px;    
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>currency converter</h1>
+        <h2> This is a Ruppes Box</h2>
+        <input type="text" id="i1">
+        <div></div>
+        <h2>Select Your Country</h2>
+        <select id="sel1">
+            <option hidden>Select country</option>
+            <option>Europe</option>
+            <option>Kuwait</option>
+            <option>UAE</option>
+            <option>Australia</option>
+            <option>China</option>
+            <option>Canada</option>
+        </select>
+        <div></div>
+        <h2>Here Is Result</h2>
+        <input type="text" id="i2">
+        <div></div>
+        <button onclick="Convert()">On click</button>
+    </div>
+
+    <script>
+          input = document.getElementById('i1')
+          input2 = document.getElementById('i2')
+          select = document.getElementById('sel1')
+
+          function Convert(){
+            switch (sel1.value){ 
+                case "Europe": input2.value = input.value*1.330;
+                break;
+
+                case "Kuwait": input2.value = input.value*270.85;
+                break;
+
+                case "UAE": input2.value = input.value*22.66;
+                break;
+
+                case "Australia": input2.value = input.value*56.42;
+                break;
+
+                case "China": input2.value = input.value*11.94;
+                break;
+
+                case "Canada": input2.value = input.value*62.46;
+                break;
+
+                default:
+                   alert('please enter rupees')
+                   input2.value = "invalid"
+
+            }
+          }
+    </script>
+</body>
+</html>
