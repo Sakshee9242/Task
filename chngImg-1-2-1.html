@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="gallery-2.jpeg" alt="" id="img1">
+    <img src="gallery-2.jpeg" alt="" id="img1" height="400px">
     <button onclick="OnClick()">Change Image</button>
 
     <script>
@@ -14,8 +14,7 @@
 
         function OnClick(){
             if(img_tag.src.match("gallery-2.jpeg")){
-                img_tag.src = "gallery-1.jpeg"
-                
+                img_tag.src = "gallery-1.jpeg"                
             }
             else{
                 img_tag.src = "gallery-2.jpeg"
