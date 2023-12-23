@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="Validate()">
+
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" id="nm"></td>
+            </tr>
+
+            <tr>
+              
+                <td><input type="submit"></td>
+            </tr>
+        </table>
+
+    </form>
+    <script>
+        name1 = document.getElementById('nm');
+
+
+        // [a-zA-Z]+
+        // ====>>    /^ $/
+        
+
+       nm_ex= /^[a-zA-Z]+$/
+      
+        function Validate()
+        {
+            // if(name1.value == "")
+            // {
+            //     alert("required..!")
+            // }
+
+            if(!name1.value.test(nm_ex))
+            {
+                alert("sdfkh")
+            }
+
+          
+        }
+
+    </script>
+    
+</body>
+</html>
