@@ -6,11 +6,23 @@
     <title>Document</title>
 </head>
 <body>
+   
+    <input type="text" id="inp1">
+    <button onclick="Onclick()">onclick</button>
+       
     <script>
-        var x = 10
-        for(x=1;x<=10;x++){
-            document.write("5" +"x" + x + "=>" + "5"*x + "<br>")
+        let x = 10;              
+        console.log(y)
+     
+
+        function Onclick(){
+            let y = Number(document.getElementById('inp1').value);
+            for(x=1;x<=10;x++){
+                document.write( y +"x" + x + "=>" + y*x + "<br>")
+            }
         }
+    
+             
     </script>
 </body>
 </html>
