@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 97vh;
+            background: linear-gradient(90deg,darkcyan,aliceblue);
+        }
+       
+         h1{
+            font-size: 50px;
+            text-decoration: underline;
+            text-transform: capitalize;
+            color: antiquewhite;
+            border: 5px double darkcyan;
+            
+         }
+         button{
+            width: 400px;
+            height: 50px;
+            margin-top: 30px;
+            font-size: 30px;
+            background-color: darkcyan;
+            color: aliceblue;
+            border-radius: 10px;
+         }
+         h2{
+            font-size: 40px;
+            text-transform: uppercase;
+            color: brown;
+            width: 400px;
+            height: 50px;
+         }
+         input{
+            width: 400px;
+            height: 50px;
+            margin-top: 10px;
+            font-size: 30px;
+            background-color: aliceblue;
+            color: darkcyan;
+            border-radius: 10px;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>age calculator</h1>
+        <div class="calculator-wrapper">
+            <div>
+                <input type="date" class="date">
+            </div>
+        </div>
+        <button onclick="Calculateage()">Calculate</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        function Calculateage(){
+           let input = document.querySelector('.date').value;
+           let result = document.getElementById('result')
+
+        //    usertype
+
+        let chooseDate = new Date(input);
+        let chooseYear = chooseDate.getFullYear();
+        let chooseMonth = chooseDate.getMonth();
+        let chooseDay = chooseDate.getDate();
+
+        // default date method date 
+
+        let currentDate = new (Date);
+        let currentyear = currentDate.getFullYear();
+        let currentmonth = currentDate.getMonth();
+        let currentday = currentDate.getDate();
+
+        // result 
+        let Calculated_year = currentyear - chooseYear;
+        let Calculated_month = ((currentmonth + 12) - chooseMonth) % 12;
+        let Calculated_day = currentday - chooseDay;
+        if(chooseDay > currentday || input == ""){
+            alert('enter valid date')
+            result.innerText = ""
+        }
+        else{
+            result.innerText = 'year' + Calculated_year + 'month' + Calculated_month + 'day' + Calculated_day
+        }
+        }
+    </script>
+</body>
+</html>
