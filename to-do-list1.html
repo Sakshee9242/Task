@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .main{
+            padding: 50px 50px;
+            background-color: rgb(238, 141, 15);
+            text-align: center;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 0;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+    <h1>TO DO LIST</h1>
+    <div class="container">
+        <input type="text" id="input_field" placeholder="WRITE HERE">
+        <button id="button">Add Something</button>
+        <ul id="todo_container"></ul>
+    </div>
+</div>
+
+    <script>
+        let input_tag = document.getElementById("input_field");
+        let btn_tag = document.getElementById("button");
+        let ul_list = document.getElementById("todo_container");
+
+        btn_tag.addEventListener('click', ()=>{
+            var list = document.createElement("li");
+            list.innerText = input_tag.value;
+            ul_list.appendChild(list);
+            
+            if(input_tag.value==""){
+                alert("please write something")
+                list.innerText = input_tag.value;
+            }
+            else{
+                input_tag.value = "" 
+            }
+            
+        })
+    </script>
+</body>
+</html>

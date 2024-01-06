@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #14171e;
+        }
+
+        a {
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+            padding: 14px 25px;
+            border-radius: 10px;
+            font-size: 1.25em;
+        }
+
+        a span {
+            position: relative;
+            z-index: 1;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            background: #14171e;
+            inset: 1px;
+            border-radius: 9px;
+            transition: 0.5s;
+        }
+        a:hover::before{
+            opacity: 0.7;
+        }
+
+         a::after{
+            content: "";
+            position: absolute;
+            background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);;
+            inset: 0px;
+            border-radius: 9px;
+            transition: 0.5s; 
+            filter: blur(20px); 
+            opacity: 0;
+        } 
+        a:hover::after{
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <a href=""><span>New Button</span></a>
+</body>
+
+</html>

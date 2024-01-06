@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p id="para"></p>
+     <script>
+       let para = document.getElementById("para")
+        var string = prompt("please enter a string");
+        // var msg = "it's a palindrome"
+        var len = string.length;
+        for(var i = 0; i< len/2;i++){
+            if(string[i]!=string[len- 1- i]){
+               para.innerHTML = "it's not a palindrome"
+            }
+           else{
+               para.innerHTML = "it's a palindrome"
+           } 
+        }
+     </script>
+</body>
+</html>
