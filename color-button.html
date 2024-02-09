@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        font-family: cursive;
+    }
+
+    body {
+        background: navy;
+    }
+
+    button,
+    span {
+        cursor: pointer;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.5s linear;
+        transform: translateX(-180px);
+    }
+
+    .add {
+        transform: translatex(0);
+    }
+
+    .left {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid white;
+    }
+
+    h6 {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .right button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid red;
+    }
+
+    .left span {
+        height: 30px;
+        display: inline-block;
+        width: 30px;
+        border-radius: 50%;
+    }
+
+    .left .a {
+        background-color: blue;
+    }
+
+    .left .b {
+        background-color: brown;
+    }
+
+    .left .c {
+        background-color: teal;
+    }
+
+    .left .d {
+        background-color: crimson;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h6>Themes</h6>
+            <span style="background-color: red;"></span>
+            <span style="background-color: blue;"></span>
+            <span style="background-color: pink;"></span>
+            <span style="background-color: brown;"></span>
+        </div>
+        <div class="right">
+            <button onclick="runFUn()">ON</button>
+            <button onclick="stopFun()">OFF</button>
+            <p></p>
+        </div>
+    </div>
+    <div class="container-2"></div>
+</body>
+<script>
+    let interval;
+    let runFUn = () => {
+        
+        let container = document.querySelector(".container")
+        container.classList.toggle("add")
+    }
+    let spans = document.querySelectorAll("span")
+    console.log(spans)
+    for (let i = 0; i < spans.length; i++) {
+            spans[i].addEventListener("click", () => {
+            interval = setInterval(() => {
+                let red = Math.floor(Math.random() * 255)
+                let blue = Math.floor(Math.random() * 255)
+                let green = Math.floor(Math.random() * 255)
+                let bg = `rgba(${red},${blue},${green})`
+                let pera = document.querySelector("p")
+                pera.innerHTML = bg
+                document.body.style.background = bg
+            }, 1000)
+        })
+        }
+    
+
+    // for (const iterator of spans) {
+    //     iterator.addEventListener("click", () => {
+    //         interval = setInterval(() => {
+    //             let red = Math.floor(Math.random() * 255)
+    //             let blue = Math.floor(Math.random() * 255)
+    //             let green = Math.floor(Math.random() * 255)
+    //             let bg = `rgba(${red},${blue},${green})`
+    //             let pera = document.querySelector("p")
+    //             pera.innerHTML = bg
+    //             document.body.style.background = bg
+    //         }, 1000)
+    //     })
+    // }
+
+    // spans.forEach((element) => {
+    //     element.addEventListener("click", () => {
+    //        interval =  setInterval(()=>{
+    //             let red = Math.floor(Math.random() * 255)
+    //         let blue = Math.floor(Math.random() * 255)
+    //         let green = Math.floor(Math.random() * 255)
+    //         let bg = `rgba(${red},${blue},${green})`
+    //         let pera =document.querySelector("p")
+    //         pera.innerHTML = bg
+    //         document.body.style.background = bg
+    //         },1000)
+    //     })
+    // })
+    let stopFun = () => {
+        clearInterval(interval)
+    }
+</script>
+
+</html>

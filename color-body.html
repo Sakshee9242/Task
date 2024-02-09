@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --bg: teal;
+            --text-clr: red;
+        }
+
+        section {
+            margin: 10px 0;
+            background-color: var(--bg);
+            color: var(--text-clr);
+        }
+
+        .change-theme-1 {
+            --bg: red;
+            --text-clr: teal;
+        }
+
+        .change-theme-2 {
+            --bg: black;
+            --text-clr: teal;
+        }
+
+        .change-theme-3 {
+            --bg: red;
+            --text-clr: pink;
+        }
+
+        .change-theme-4 {
+            --bg: pink;
+            --text-clr: teal;
+        }
+
+        .btn-1 {
+            background-color: navy;
+        }
+
+        .btn-2 {
+            background-color: yellow;
+        }
+
+        .btn-3 {
+            background-color: brown;
+        }
+
+        .btn-4 {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="btn-1">first</button>
+        <button class="btn-2">second</button>
+        <button class="btn-3">third</button>
+        <button class="btn-4">four</button>
+    </nav>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur error mollitia minima magni dicta officia
+        voluptate doloribus excepturi labore sint. Nam, eum. Unde omnis delectus assumenda praesentium aperiam, aliquam
+        tenetur blanditiis quos odit nobis labore repellat totam amet dicta molestias ipsum est nostrum excepturi, fuga
+        optio quaerat itaque dignissimos! Ducimus.
+    </section>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur error mollitia minima magni dicta officia
+        voluptate doloribus excepturi labore sint. Nam, eum. Unde omnis delectus assumenda praesentium aperiam, aliquam
+        tenetur blanditiis quos odit nobis labore repellat totam amet dicta molestias ipsum est nostrum excepturi, fuga
+        optio quaerat itaque dignissimos! Ducimus.
+    </section>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur error mollitia minima magni dicta officia
+        voluptate doloribus excepturi labore sint. Nam, eum. Unde omnis delectus assumenda praesentium aperiam, aliquam
+        tenetur blanditiis quos odit nobis labore repellat totam amet dicta molestias ipsum est nostrum excepturi, fuga
+        optio quaerat itaque dignissimos! Ducimus.
+    </section>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur error mollitia minima magni dicta officia
+        voluptate doloribus excepturi labore sint. Nam, eum. Unde omnis delectus assumenda praesentium aperiam, aliquam
+        tenetur blanditiis quos odit nobis labore repellat totam amet dicta molestias ipsum est nostrum excepturi, fuga
+        optio quaerat itaque dignissimos! Ducimus.
+    </section>
+</body>
+<script>
+    let buttons = document.querySelectorAll("button")
+    let root = document.querySelector(":root")
+    for (const button of buttons) {
+        button.addEventListener("click", (event) => {
+            if (event.target.classList[0] == "btn-1") {
+                if(root.hasAttribute("class")){
+                    root.removeAttribute("class")
+                    root.classList.add("change-theme-1")
+                }
+            }else if(event.target.classList[0] == "btn-2") {
+                if(root.hasAttribute("class")){
+                    root.removeAttribute("class")
+                    root.classList.add("change-theme-2")
+                }
+            }else if (event.target.classList[0] == "btn-3") {
+                if(root.hasAttribute("class")){
+                    root.removeAttribute("class")
+                    root.classList.add("change-theme-3")
+                }
+            }else if (event.target.classList[0] == "btn-4") {
+                if(root.hasAttribute("class")){
+                    root.removeAttribute("class")
+                    root.classList.add("change-theme-4")
+                }
+            }
+        })
+
+    }
+</script>
+
+<!-- <script>
+    let buttons = document.querySelectorAll("button");
+    let body = document.querySelector("body")
+    buttons.forEach((elm)=>{
+        elm.addEventListener("click",()=>{
+            if(elm.classList[0]=="btn-1"){
+            body.style.background = "navy"
+        }
+        if(elm.classList[0]=="btn-2"){
+            body.style.background = "yellow"
+        }
+        if(elm.classList[0]=="btn-3"){
+            body.style.background = "brown"
+        }
+        if(elm.classList[0]=="btn-4"){
+            body.style.background = "black"
+        }
+        })  
+    })
+</script> -->
+
+</html>

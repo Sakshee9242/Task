@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing and Cutting Text Reveal Effect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .container {
+  position: relative;
+  width: 300px; /* Adjust this width according to your text */
+  height: 50px; /* Adjust this height according to your text */
+  overflow: hidden;
+}
+
+.typing-cutting-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Change this to match your background color */
+  color: #000000; /* Change this to match your text color */
+  font-size: 24px; /* Change this to match your desired font size */
+  text-align: left;
+  line-height: 50px; /* Adjust this to vertically center your text */
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing-cutting 10s steps(40, end);
+}
+
+@keyframes typing-cutting {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+</style>
+<body>
+  <div class="container">
+    <div class="typing-cutting-text">This is a long text to demonstrate the typing and cutting effect.</div>
+  </div>
+</body>
+</html>

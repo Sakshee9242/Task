@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    :root {
+        --xyz: teal;
+        --text-first-clr: red;
+        --text-second-clr: pink;
+        --transition: "5s liner";
+        --h1font: "xyz"
+    }
+
+    .dark {
+        --xyz: red;
+        --text-first-clr: rgb(84, 80, 74);
+        --text-second-clr: green;
+    }
+.red{
+           --xyz: blue;
+           --text-first-clr: orange;
+        --text-second-clr: yellow;
+}
+
+
+
+
+
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        font-family: cursive;
+    }
+
+    section {
+        background: var(--xyz);
+    }
+
+    body {
+        /* background: navy; */
+    }
+
+    button,
+    span {
+        cursor: pointer;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.5s linear;
+        transform: translateX(0px);
+    }
+
+    .add {
+        transform: translatex(0);
+    }
+
+    .left {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid white;
+    }
+
+    h6 {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .right button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid red;
+    }
+
+    .left span {
+        height: 30px;
+        display: inline-block;
+        width: 30px;
+        border-radius: 50%;
+    }
+
+    .left .a {
+        background-color: blue;
+    }
+
+    .left .b {
+        background-color: brown;
+    }
+
+    .left .c {
+        background-color: teal;
+    }
+
+    .left .d {
+        background-color: crimson;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h6>Themes</h6>
+            <span class="a dark vddfd" onclick="runFunction(this)" id="first"></span>
+            <span class="b light" onclick="runFunction(this)"></span>
+            <span class="c" onclick="runFunction(this)"></span>
+            <span class="d" onclick="runFunction(this)"></span>
+        </div>
+        <div class="right">
+            <button onclick="runFUn()">B</button>
+            <button onclick="stopFun()">band</button>
+            <p></p>
+        </div>
+    </div>
+    <div class="container-2">
+        <section>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa quia modi et repudiandae adipisci
+            obcaecati recusandae libero officia tenetur illum nesciunt possimus, ut nulla sint minima, neque explicabo?
+            Aliquid ipsam in sequi, dolor neque temporibus corporis optio deleniti magnam sed qui doloribus porro
+            deserunt praesentium ea quis non assumenda facilis repellat accusamus error? Libero natus tenetur ex! Earum
+            dicta harum at autem commodi qui corrupti, accusantium odit excepturi quo pariatur alias dignissimos vel
+            rerum sunt, ipsum, blanditiis quia vero. Deleniti, non temporibus, eaque, tenetur eligendi laborum quaerat
+            alias explicabo vero voluptates quibusdam aliquam unde delectus voluptatibus debitis! Ad illum dolorum hic
+            assumenda magni quas accusantium eaque tempora dignissimos quos, animi inventore iste nobis iure eveniet
+            placeat? Repudiandae eum blanditiis ducimus laboriosam officiis incidunt dolorem illo delectus fuga unde!
+            Consectetur velit nostrum similique animi neque, quibusdam itaque earum nam voluptatibus officiis
+            repellendus placeat doloremque, ab vitae quod perspiciatis corrupti laboriosam odio totam accusantium. Illum
+            accusantium nostrum omnis in aut voluptatibus? Obcaecati, eligendi accusantium tempora libero in, quasi eum
+            quo maxime nemo deleniti blanditiis tenetur animi magni ea mollitia sint. Repellendus nostrum ut quod iste
+            saepe at quia, unde quisquam totam consequatur qui laudantium nemo dolore a. Quo officiis facilis amet?
+        </section>
+        <section>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa quia modi et repudiandae adipisci
+            obcaecati recusandae libero officia tenetur illum nesciunt possimus, ut nulla sint minima, neque explicabo?
+            Aliquid ipsam in sequi, dolor neque temporibus corporis optio deleniti magnam sed qui doloribus porro
+            deserunt praesentium ea quis non assumenda facilis repellat accusamus error? Libero natus tenetur ex! Earum
+            dicta harum at autem commodi qui corrupti, accusantium odit excepturi quo pariatur alias dignissimos vel
+            rerum sunt, ipsum, blanditiis quia vero. Deleniti, non temporibus, eaque, tenetur eligendi laborum quaerat
+            alias explicabo vero voluptates quibusdam aliquam unde delectus voluptatibus debitis! Ad illum dolorum hic
+            assumenda magni quas accusantium eaque tempora dignissimos quos, animi inventore iste nobis iure eveniet
+            placeat? Repudiandae eum blanditiis ducimus laboriosam officiis incidunt dolorem illo delectus fuga unde!
+            Consectetur velit nostrum similique animi neque, quibusdam itaque earum nam voluptatibus officiis
+            repellendus placeat doloremque, ab vitae quod perspiciatis corrupti laboriosam odio totam accusantium. Illum
+            accusantium nostrum omnis in aut voluptatibus? Obcaecati, eligendi accusantium tempora libero in, quasi eum
+            quo maxime nemo deleniti blanditiis tenetur animi magni ea mollitia sint. Repellendus nostrum ut quod iste
+            saepe at quia, unde quisquam totam consequatur qui laudantium nemo dolore a. Quo officiis facilis amet?
+        </section>
+    </div>
+</body>
+
+<script>
+    let myroot = document.querySelector(":root")
+    let spans = document.querySelectorAll("span")
+// function runFunction (ab){
+
+// }
+let runFunction = (ab)=>{
+    if(ab.classList[1]=="dark"){
+        myroot.classList.add("dark")
+    } 
+        if(ab.classList[1]=="light"){
+            myroot.classList.remove("dark")
+        myroot.classList.add("red")
+    }
+}
+</script>
+<!-- <script>
+    let interval;
+    let runFUn = () => {
+        let container = document.querySelector(".container")
+        container.classList.toggle("add")
+    }
+    let spans = document.querySelectorAll("span")
+    console.log(spans)
+    for (let i = 0; i < spans.length; i++) {
+        spans[i].addEventListener("click", () => {
+            interval = setInterval(() => {
+                let red = Math.floor(Math.random() * 255)
+                let blue = Math.floor(Math.random() * 255)
+                let green = Math.floor(Math.random() * 255)
+                let bg = `rgba(${red},${blue},${green})`
+                let pera = document.querySelector("p")
+                pera.innerHTML = bg
+                document.body.style.background = bg
+            }, 1000)
+        })
+    }
+
+
+    // for (const iterator of spans) {
+    //     iterator.addEventListener("click", () => {
+    //         interval = setInterval(() => {
+    //             let red = Math.floor(Math.random() * 255)
+    //             let blue = Math.floor(Math.random() * 255)
+    //             let green = Math.floor(Math.random() * 255)
+    //             let bg = `rgba(${red},${blue},${green})`
+    //             let pera = document.querySelector("p")
+    //             pera.innerHTML = bg
+    //             document.body.style.background = bg
+    //         }, 1000)
+    //     })
+    // }
+
+    // spans.forEach((element) => {
+    //     element.addEventListener("click", () => {
+    //        interval =  setInterval(()=>{
+    //             let red = Math.floor(Math.random() * 255)
+    //         let blue = Math.floor(Math.random() * 255)
+    //         let green = Math.floor(Math.random() * 255)
+    //         let bg = `rgba(${red},${blue},${green})`
+    //         let pera =document.querySelector("p")
+    //         pera.innerHTML = bg
+    //         document.body.style.background = bg
+    //         },1000)
+    //     })
+    // })
+    let stopFun = () => {
+        clearInterval(interval)
+    }
+</script> -->
+
+</html>
