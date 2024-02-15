@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        --bg-clr: white;
+        --text: red;
+        --border-clr: gray;
+    }
+
+    .change-1 {
+        --bg-clr: red;
+        --text: blue;
+        --border-clr: yellow;
+    }
+
+    .change-2 {
+        --bg-clr: pink;
+        --text: black;
+        --border-clr: yellow;
+    }
+
+    .change-3 {
+        --bg-clr: tomato;
+        --text: teal;
+        --border-clr: yellow;
+    }
+
+    section {
+        margin: 50px 0;
+        background: var(--bg-clr);
+        color: var(--text);
+        border: 1px solid var(--border-clr);
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <button class="" id="first-1">theme 1</button>
+    <button id="first-2">theme 2</button>
+    <button id="first-3">theme 3</button>
+    <button id="first-4">theme 4</button>
+    <button id="first-5">auto</button>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, quo earum! Quod maxime laudantium fuga
+        alias, dignissimos soluta vel eligendi voluptatum suscipit rerum, voluptatibus quia itaque? Iste libero, quis,
+        adipisci repudiandae ipsum pariatur ex repellat sint aliquid voluptas rem quos incidunt quas debitis labore
+        ratione maiores nobis, sapiente aperiam optio.
+    </section>
+</body>
+<script>
+    let buttons = document.querySelectorAll("button")
+    let root = document.querySelector(":root")
+    buttons.forEach((element) => {
+        // console.log(element)
+        element.addEventListener("click", () => {
+            if (root.classList) {
+                // console.log(root.classList)
+                root.classList.forEach((x) => {
+                    // console.log(x)
+                    root.classList.remove(x)
+                })
+            }
+            if (element.id == "first-1") {
+                root.classList.add("change-1")
+            }
+            if (element.id == "first-2") {
+                root.classList.add("change-2")
+            }
+            if (element.id == "first-3") {
+                root.classList.add("change-3")
+            }
+            if (element.id == "first-4") {
+                root.classList.add("change-4")
+            }
+            if(element.if=="first-5"){
+                root.removeAttribute("class")
+            }
+        })
+    })
+</script>
+
+</html>

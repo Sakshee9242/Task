@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./img-gallery.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img-gallery gallery">
+            <img src="https://assets.codepen.io/2585/fiddle-leaf.jpeg" alt="image">    
+        </div>
+        <div class="img-gallery">
+            <img src="https://assets.codepen.io/2585/pink-princess.jpeg" alt="image">    
+        </div>
+        <div class="img-gallery">
+            <img src="https://assets.codepen.io/2585/kara-eads-zcVArTF8Frs-unsplash.jpg" alt="image">    
+        </div>
+        <div class="img-gallery">
+            <img src="https://assets.codepen.io/2585/pothos.jpeg" alt="image">     
+        </div>
+        <div class="img-gallery">
+            <img src="https://assets.codepen.io/2585/rubber-tree.webp" alt="image">  
+        </div>
+    </div>
+
+    <script>
+        let images = document.querySelectorAll(".img-gallery")
+        // for(const image of images){
+        //     // console.log(image)
+        //     // console.log(images)
+        //     image.addEventListener("click" , ()=>{
+        //         images.forEach((ele)=>{
+        //             ele.classList.remove("gallery")
+        //         })
+        //         image.classList.add("gallery")
+
+        //     })
+        // }
+
+        images.forEach((ele)=>{
+            ele.addEventListener("click", ()=>{
+             images.forEach((element)=>
+             {element.classList.remove("gallery")}
+             )  
+             ele.classList.add("gallery") 
+
+            })
+        })
+    </script>
+</body>
+</html>

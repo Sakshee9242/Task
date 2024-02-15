@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform: translateX(-160px);
+
+        }
+        body {
+        background: navy;
+    }
+        .add{
+            transform: translateX(0);
+            transition: 3s;
+        }
+        .right button{
+            height: 40px;
+            width: 40px;
+            background-color: teal;
+            border-radius: 50%;
+        }
+        .left span{
+            height: 30px;
+            width: 30px; 
+            border-radius: 50%;
+            display: inline-block;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+           <span style="background-color: red;"></span>
+           <span style="background-color: blue;"></span>
+           <span style="background-color: green;"></span>
+           <span style="background-color: greenyellow;"></span>
+        </div>
+        <div class="right">
+            <button class="btn1">ON</button>
+            <button onclick="stopFun()">OFF</button>
+        </div>
+    </div>
+    <script>
+
+        let btn1 = document.querySelector(".btn1")
+        btn1.addEventListener("click",()=>{
+            let container = document.querySelector(".container")
+            container.classList.toggle("add")
+        })
+      let interval
+      let spans = document.querySelectorAll("span")
+    //   for(i=0;i<spans.length;i++){
+    //     spans[i].addEventListener("click", ()=>{
+    //         interval = setInterval(()=>{
+    //           let red = Math.floor(Math.random()*255)
+    //         //   console.log(Math.floor(Math.random()*255))
+    //           let blue = Math.floor(Math.random()*255)
+    //           let green = Math.floor(Math.random()*255)
+    //           let bg = `rgba(${red},${blue},${green})`
+    //           document.body.style.background = bg
+    //         }, 1000)
+    //     })
+    //   }
+
+
+
+    //    for(const element of spans){
+    //     console.log(element)
+    //     element.addEventListener("click",()=>{
+    //         interval = setInterval(()=>{
+    //           let red = Math.floor(Math.random()*255)
+    //         //   console.log(Math.floor(Math.random()*255))
+    //           let blue = Math.floor(Math.random()*255)
+    //           let green = Math.floor(Math.random()*255)
+    //           let bg = `rgba(${red},${blue},${green})`
+    //           document.body.style.background = bg
+    //         }, 1000)          
+    //     })
+    //    }
+
+       spans.forEach((ele)=>{
+        ele.addEventListener('click', ()=>{
+            interval = setInterval(()=>{
+              let red = Math.floor(Math.random()*255)
+            //   console.log(Math.floor(Math.random()*255))
+              let blue = Math.floor(Math.random()*255)
+              let green = Math.floor(Math.random()*255)
+              let bg = `rgba(${red},${blue},${green})`
+              document.body.style.background = bg
+            }, 1000)    
+        })
+       })
+
+
+
+
+
+
+
+      let stopFun = ()=>{
+        clearInterval(interval)
+      }
+    </script>
+</body>
+</html>

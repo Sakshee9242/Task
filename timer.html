@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <p id="counter"><span id="first">10</span> : <span id="second">00</span></p>
+      <button id="btn">Start</button>
+</body>
+   <script>
+     let counter = document.getElementById("counter")
+     let btn = document.getElementById("btn")
+     let span1 = document.querySelector("#first")
+     let span2 = document.querySelector("#second")
+      let counter1 = 10;
+      let counter2 = 10; 
+    let interval;
+    btn.addEventListener("click",()=>{
+        interval = setInterval(() => {
+            counter1--
+      if(counter1<0){
+        counter1 = 9
+
+      }
+      if(counter1<=0){
+        counter2--
+        if(counter2<0){
+            counter2 = 10
+        }
+        if(counter2<10){
+        span1.innerHTML = "0"+counter2           
+        }
+        else{
+        span1.innerHTML = counter2
+
+        }
+        if(counter2==0 && counter1==0){
+            // console.log("1223344")
+            clearInterval(interval)
+            counter1 = 0
+            counter2 = 0
+            span1.innerHTML = "00"
+            span2.innerHTML = "00"
+            
+            
+        }
+      }
+      span2.innerHTML = "0"+counter1;
+    },1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //  let counter_num = 10.00;
+    //   counter.innerHTML = counter_num
+    //  btn.addEventListener("click", ()=>{
+    //     //   console.log("hello")
+    //     counter_num++
+    //     counter.innerHTML = counter_num
+        
+        
+    //  })
+
+        }, interval);
+
+   </script>
+</html>
