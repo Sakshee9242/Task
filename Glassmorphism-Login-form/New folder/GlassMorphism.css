@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+section{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   width: 100%;
+   background: url("https://plus.unsplash.com/premium_photo-1675804669805-7722a771fff3?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 450px;
+    width: 400px;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(25px);
+}
+h2{
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+}
+.input-box{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+input:focus ~ label{
+    top: -5px;
+}
+input:valid ~ label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    padding: 0 30px 0 35px;
+    outline: none;
+    border: none;
+    color: #f5eeee;
+    background: transparent;
+    font-size: 1.1em;
+    padding: 0 35px 0 5px;
+}
+.input-box ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.4em;
+    top: 20px;
+    font-weight: bolder;
+}
+.forget{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 15px;
+    color: #fff;
+}
+.forget label a{
+    color: #fff;
+    text-decoration: none;
+}
+.forget label input[type="checkbox"]{
+    margin-right: 2px;
+}
+.forget label a:hover {
+    text-decoration: underline;
+  }
+  button{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: -1px;
+  }
+  .register{
+    text-align: center;
+    margin: 25px 0 10px;
+    color: #fff;
+    font-size: 0.9em;
+  }
+  .register p a{
+    text-decoration: none;
+    color: #fff;
+  }
+
