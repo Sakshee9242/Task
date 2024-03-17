@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Document</title>
     <style>
-        *{margin: 0;padding: 0;}
         nav{
             position: relative;
             display: flex;
@@ -23,10 +22,17 @@
             cursor: pointer;
             margin-left:-700px;
         }
+        #btn{
+            font-size: 30px;
+            font-family: sans-serif;
+            color: #ffffff;
+            display: none;
+            position: absolute;
+        }
         ul{
             position: absolute;
             transition: 1s;
-            z-index: 1;
+            /* z-index: 1; */
            
         }
         ul li{
@@ -51,15 +57,6 @@
         ul li:hover::before{
             width: 100%;
         }
-        #btn{
-            font-size: 30px;
-            font-family: sans-serif;
-            color: #ffffff;
-            display: none;
-            position: absolute;
-
-        }
-
         @media(max-width:500px){
             #logo{
                 margin-left:-350px;
@@ -86,38 +83,33 @@
                 width: 15%;
               }
         }
-
-        
-           
     </style>
 </head>
 <body>
-     <nav>
+    <nav>
         <div id="logo">LOGO</div>
         <div id="btn" onclick="Onclick()"><i class="fa-solid fa-xmark"></i></div>
         <ul id="menu">
-           <li>Home</li>
-           <li>About</li>
-           <li>Service</li>
-           <li>Team</li>
-           <li>Contact</li>
-        </ul>
-     </nav>
-   <script>
-       let ul = document.getElementById('menu')
-       console.log(ul)
-       let btn = document.getElementById('btn')
-       console.log(btn)
+            <li>Home</li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Team</li>
+            <li>Contact</li>
+         </ul>
+    </nav>
 
-       function Onclick(){
-        if(ul.style.left == "0%"){
-            ul.style.left  = "100%"
-        }
-        else{
+    <script>
+        let ul = document.querySelector("menu")
+        let btn = document.querySelector("btn")
+
+        function Onclick(){
+           if(ul.style.left == "0%"){
+            ul.style.left = "-100%"
+           }
+           else(
             ul.style.left = "0%"
+           )
         }
-       }
-   </script>
-   
+    </script>
 </body>
 </html>
