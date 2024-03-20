@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Add some basic styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>To-Do List</h1>
+    
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList">
+        <!-- Tasks will be added here dynamically -->
+    </ul>
+
+    <script>
+        function addTask() {
+            // Get the input value
+            var taskInput = document.getElementById("taskInput");
+            var taskText = taskInput.value;
+
+            if (taskText.trim() !== "") {
+                // Create a new list item
+                var listItem = document.createElement("li");
+
+                // Add the task text to the list item
+                listItem.textContent = taskText;
+
+                // Add the list item to the task list
+                document.getElementById("taskList").appendChild(listItem);
+
+                // Clear the input field
+                taskInput.value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
